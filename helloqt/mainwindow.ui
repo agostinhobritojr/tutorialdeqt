@@ -6,37 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>827</width>
-    <height>560</height>
+    <width>711</width>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="40,60">
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QLabel" name="labelAmplitude">
-          <property name="text">
-           <string>Amplitude</string>
+         <widget class="QLCDNumber" name="lcdNumber">
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSlider" name="horizontalSliderAmplitude">
+         <widget class="QSlider" name="horizontalSlider">
+          <property name="maximum">
+           <number>99</number>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLCDNumber" name="lcdNumber">
-          <property name="segmentStyle">
-           <enum>QLCDNumber::Flat</enum>
           </property>
          </widget>
         </item>
@@ -45,142 +44,124 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QLabel" name="labelFrequencia">
+         <widget class="QTextEdit" name="textEditLeft"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonCopy">
           <property name="text">
-           <string>Frequencia</string>
+           <string>copy</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSlider" name="horizontalSliderFrequencia">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLCDNumber" name="lcdNumber_2">
-          <property name="segmentStyle">
-           <enum>QLCDNumber::Flat</enum>
-          </property>
-         </widget>
+         <widget class="QTextEdit" name="textEditRight"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QLabel" name="labelVelocidade">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonMorre">
           <property name="text">
-           <string>Velocidade</string>
+           <string>Morre, diabo!</string>
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QSlider" name="horizontalSliderVelocidade">
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,100">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>ampli</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSlider" name="horizontalSliderAmpl">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QLCDNumber" name="lcdNumber_3">
-          <property name="segmentStyle">
-           <enum>QLCDNumber::Flat</enum>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>freq</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSlider" name="horizontalSliderFreq">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>veloc</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSlider" name="horizontalSliderVeloc">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
        </layout>
       </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="30,70">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QTextEdit" name="textEdit"/>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButtonCopia">
-            <property name="text">
-             <string>&gt;&gt;&gt;&gt;</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QTextBrowser" name="textBrowser"/>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QLabel" name="label">
-              <property name="text">
-               <string>x</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="lcdNumberX">
-              <property name="segmentStyle">
-               <enum>QLCDNumber::Flat</enum>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QLabel" name="label_2">
-              <property name="text">
-               <string>y</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="lcdNumberY">
-              <property name="segmentStyle">
-               <enum>QLCDNumber::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
+       <widget class="QLCDNumber" name="lcdNumberX">
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="segmentStyle">
+         <enum>QLCDNumber::Flat</enum>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="Plotter" name="widget" native="true"/>
+       <widget class="QLCDNumber" name="lcdNumberY">
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="segmentStyle">
+         <enum>QLCDNumber::Flat</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Plotter" name="widgetPlotter" native="true"/>
       </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButtonQuit">
-      <property name="text">
-       <string>Morre, diabo!</string>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>
@@ -189,7 +170,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>827</width>
+     <width>711</width>
      <height>22</height>
     </rect>
    </property>
@@ -197,7 +178,8 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionQuit"/>
+    <addaction name="actionKill"/>
+    <addaction name="actionAbreDialogo"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -208,16 +190,24 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionQuit"/>
+   <addaction name="actionKill"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionQuit">
+  <action name="actionKill">
    <property name="icon">
     <iconset resource="recursos.qrc">
-     <normaloff>:/icones/quit</normaloff>:/icones/quit</iconset>
+     <normaloff>:/bomba</normaloff>:/bomba</iconset>
    </property>
    <property name="text">
-    <string>Quit</string>
+    <string>Kill</string>
+   </property>
+   <property name="toolTip">
+    <string>Finaliza a Interface</string>
+   </property>
+  </action>
+  <action name="actionAbreDialogo">
+   <property name="text">
+    <string>AbreDialogo</string>
    </property>
   </action>
  </widget>
@@ -230,6 +220,7 @@
    <container>1</container>
    <slots>
     <slot>setAmplitude(int)</slot>
+    <slot>setFrequencia(int)</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -238,104 +229,90 @@
  </resources>
  <connections>
   <connection>
-   <sender>pushButtonCopia</sender>
+   <sender>pushButtonCopy</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>copiaTexto()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>169</x>
-     <y>343</y>
+     <x>176</x>
+     <y>291</y>
     </hint>
     <hint type="destinationlabel">
-     <x>209</x>
-     <y>221</y>
+     <x>244</x>
+     <y>314</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>actionQuit</sender>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>mostraLcd(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>207</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionKill</sender>
    <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
-   <slot>mataTudo()</slot>
+   <slot>finaliza()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>314</x>
-     <y>275</y>
+     <x>253</x>
+     <y>157</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>horizontalSliderAmplitude</sender>
+   <sender>horizontalSliderAmpl</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>722</x>
-     <y>85</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>782</x>
-     <y>81</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderFrequencia</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber_2</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>716</x>
-     <y>118</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>777</x>
-     <y>116</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderVelocidade</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber_3</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>732</x>
-     <y>148</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>797</x>
-     <y>148</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderAmplitude</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>widget</receiver>
+   <receiver>widgetPlotter</receiver>
    <slot>setAmplitude(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>391</x>
+     <x>365</x>
      <y>85</y>
     </hint>
     <hint type="destinationlabel">
-     <x>566</x>
+     <x>430</x>
      <y>350</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderFreq</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widgetPlotter</receiver>
+   <slot>setFrequencia(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>302</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
   <slot>copiaTexto()</slot>
-  <slot>mataTudo()</slot>
+  <slot>mostraLcd(int)</slot>
+  <slot>finaliza()</slot>
+  <slot>mostraDialogo()</slot>
  </slots>
 </ui>

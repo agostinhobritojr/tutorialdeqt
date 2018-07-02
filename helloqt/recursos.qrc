@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/icones">
-        <file alias="quit">recursos/quit.png</file>
+    <qresource prefix="/">
+        <file alias="bomba">resources/bomb.png</file>
     </qresource>
 </RCC>

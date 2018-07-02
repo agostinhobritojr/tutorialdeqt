@@ -16,8 +16,10 @@ public:
   ~MainWindow();
 
 public slots:
-  void mataTudo();
-  void copiaTexto();
+  void finaliza(void);
+  void copiaTexto(void);
+  void mostraLcd(int value);
+  void abreDialogo(void);
 
 private:
   Ui::MainWindow *ui;
